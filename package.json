@@ -1,0 +1,23 @@
+{
+  "name": "coinbarn",
+  "private": true,
+  "version": "0.1.0",
+  "description": "CoinBarn — Telegram Mini App farm clicker (pnpm monorepo)",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter @coinbarn/web --filter @coinbarn/api dev",
+    "dev:web": "pnpm --filter @coinbarn/web dev",
+    "dev:api": "pnpm --filter @coinbarn/api dev",
+    "build": "pnpm -r build",
+    "build:web": "pnpm --filter @coinbarn/web build",
+    "build:api": "pnpm --filter @coinbarn/api build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter @coinbarn/api prisma:generate",
+    "db:migrate": "pnpm --filter @coinbarn/api prisma:migrate",
+    "db:seed": "pnpm --filter @coinbarn/api prisma:seed"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
